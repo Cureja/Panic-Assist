@@ -35,5 +35,5 @@ dependencies {
     implementation 'com.github.kibotu:Heart-Rate-Ometer:04d9a2e8e0@aar'
     //Animation Library
     compile 'com.clarifai.clarifai-api2:core:2.3.0'
-    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:design:27.0.2'
 }

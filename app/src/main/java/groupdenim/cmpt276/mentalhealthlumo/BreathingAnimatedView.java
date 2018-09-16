@@ -77,17 +77,6 @@ public class BreathingAnimatedView extends View {
     @Override
     public void onSizeChanged(int w, int h, int oldw, int oldh) {
 
-        //source: https://stackoverflow.com/questions/13950338/how-to-make-an-android-device-vibrate
-        Vibrator vibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            vibrator.vibrate(VibrationEffect.createOneShot(7000,VibrationEffect.DEFAULT_AMPLITUDE));
-            Log.d(TAG, "vibrated");
-        }else{
-            //deprecated in API 26
-            vibrator.vibrate(7000);
-            Log.d(TAG, "vibrated");
-        }
 
         Log.d(TAG, "onSizeChanged hit");
         ObjectAnimator growAnimator = ObjectAnimator.ofFloat(this,

@@ -4,8 +4,11 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -68,7 +71,7 @@ public class BreathingActivity extends AppCompatActivity {
                 counter[0] = 0;
                 textChange();
                 TextView instructionText = (TextView) findViewById(R.id.textInstructions);
-                instructionText.setText("Breathe Out");
+                instructionText.setText("Breathe In");
                 counter[0]++;
                 mBreathingAnimatedView.animationActivated(x, y);
                 handler.postDelayed(this, delay);
@@ -88,7 +91,21 @@ public class BreathingActivity extends AppCompatActivity {
                 if (counter[0] % 4 == 2) {
                     TextView instructionText = (TextView) findViewById(R.id.textInstructions);
                     instructionText.setText("");
-                    instructionText.setText("Breathe In");
+                    instructionText.setText("Breathe Out");
+
+                    //source: https://stackoverflow.com/questions/13950338/how-to-make-an-android-device-vibrate
+                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        vibrator.vibrate(VibrationEffect.createOneShot(250,VibrationEffect.DEFAULT_AMPLITUDE));
+                        Log.d(TAG, "vibrated");
+                    }else{
+                        //deprecated in API 26
+                        vibrator.vibrate(250);
+                        Log.d(TAG, "vibrated");
+                    }
+
+
                     counter[0]++;
                 } else if (counter[0] % 4 == 1 || counter[0] % 4 == 3) {
                     TextView instructionText = (TextView) findViewById(R.id.textInstructions);
@@ -98,7 +115,21 @@ public class BreathingActivity extends AppCompatActivity {
                 } else if (counter[0] % 4 == 0){
                     TextView instructionText = (TextView) findViewById(R.id.textInstructions);
                     instructionText.setText("");
-                    instructionText.setText("Breathe out");
+                    instructionText.setText("Breathe In");
+
+                    //source: https://stackoverflow.com/questions/13950338/how-to-make-an-android-device-vibrate
+                    Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                        vibrator.vibrate(VibrationEffect.createOneShot(250,VibrationEffect.DEFAULT_AMPLITUDE));
+                        Log.d(TAG, "vibrated");
+                    }else{
+                        //deprecated in API 26
+                        vibrator.vibrate(250);
+                        Log.d(TAG, "vibrated");
+                    }
+
+
                     counter[0]++;
                 }
                 handler.postDelayed(this, delay);
