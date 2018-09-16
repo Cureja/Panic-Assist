@@ -28,6 +28,7 @@
         <activity android:name=".BreathingActivity" />
         <activity android:name=".TestYourHappiness" />
         <activity android:name=".ResourcesActivity"></activity>
+        <activity android:name=".AboutPage"></activity>
     </application>
 
 </manifest>

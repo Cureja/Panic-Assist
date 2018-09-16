@@ -46,5 +46,13 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        goToAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, AboutPage.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
