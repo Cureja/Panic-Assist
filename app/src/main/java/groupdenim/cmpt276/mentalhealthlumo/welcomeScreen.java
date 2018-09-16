@@ -21,9 +21,9 @@ public class welcomeScreen extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new ExplodeAnimation(skipButton)
-                        .setDuration(750)
-                        .animate();
+//                new ExplodeAnimation(skipButton)
+//                        .setDuration(750)
+//                        .animate();
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override

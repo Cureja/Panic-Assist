@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DragDropNumbers"></activity>
+        <activity android:name=".BreathingActivity" />
     </application>
 
 </manifest>
