@@ -71,7 +71,21 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        gotoBreathing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, BreathingActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        goToResouces.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, ResourcesActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

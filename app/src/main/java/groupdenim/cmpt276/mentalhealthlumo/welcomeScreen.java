@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
 public class welcomeScreen extends AppCompatActivity {
 
     @Override
@@ -21,11 +20,8 @@ public class welcomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+
             }
         });
-
-
-
-
     }
 }

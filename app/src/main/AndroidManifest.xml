@@ -5,6 +5,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -23,9 +25,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".DragDropNumbers" />
+        <activity android:name=".BreathingActivity" />
         <activity android:name=".Form" />
         <activity android:name=".FormViewing"></activity>
         <activity android:name=".TestYourHappiness" />
+        <activity android:name=".ResourcesActivity"></activity>
         <activity android:name=".AboutPage"></activity>
     </application>
 
