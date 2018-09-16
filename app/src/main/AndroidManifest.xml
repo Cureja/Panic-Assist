@@ -11,15 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".defaultMenu">
+        <activity android:name=".welcomeScreen" />
+        <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".welcomeScreen" />
-        <activity android:name=".MainMenu"></activity>
     </application>
 
 </manifest>
