@@ -8,5 +8,11 @@
     <string name="plsEnter">Enter your image url</string>
     <string name="toImage">Happy Or Sad</string>
     <string name="nil">nil</string>
+    <string name="dragNDrop">Drag and Drop</string>
+    <string name="accessPreferences">Settings</string>
+    <string name="breathingAssist">Breathing Assist</string>
+    <string name="diary">New Entry</string>
+    <string name="rss">Resources</string>
+    <string name="about">About</string>
 
 </resources>

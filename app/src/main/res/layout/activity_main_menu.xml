@@ -6,14 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".MainMenu">
 
-    <Button
-        android:id="@+id/toImageChecker"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/about"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="486dp" />
+
+        <Button
+            android:id="@+id/resButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rss"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="486dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/accessPreferences"
+            tools:layout_editor_absoluteY="424dp" />
+
+        <Button
+            android:id="@+id/breatheButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/breathingAssist"
+            tools:layout_editor_absoluteY="424dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diaryEntry">
+
+        <Button
+            android:id="@+id/dragNDrop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dragNDrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="360dp" />
+
+        <Button
+            android:id="@+id/toImageChecker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/toImage"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="360dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/diaryEntry"
+        android:layout_width="0dp"
+        android:layout_height="224dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text="@string/toImage"
+        android:text="@string/diary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

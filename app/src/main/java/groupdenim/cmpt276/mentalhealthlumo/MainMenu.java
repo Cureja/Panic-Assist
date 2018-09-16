@@ -24,11 +24,24 @@ public class MainMenu extends AppCompatActivity {
         }
 
         Button goToImage = findViewById(R.id.toImageChecker);
+        Button goToDragNDrop = findViewById(R.id.dragNDrop);
+        Button goToSettings = findViewById(R.id.settingsButton);
+        Button goToAbout = findViewById(R.id.aboutButton);
+        Button goToResouces = findViewById(R.id.resButton);
+        Button gotoBreathing = findViewById(R.id.breatheButton);
 
         goToImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainMenu.this, TestYourHappiness.class);
+                startActivity(intent);
+            }
+        });
+
+        goToDragNDrop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, DragDropNumbers.class);
                 startActivity(intent);
             }
         });
