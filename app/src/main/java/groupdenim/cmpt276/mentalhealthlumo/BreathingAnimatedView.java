@@ -7,6 +7,10 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.os.Build;
+import android.os.Handler;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.support.annotation.Nullable;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.util.AttributeSet;
@@ -20,7 +24,7 @@ import android.widget.TextView;
 public class BreathingAnimatedView extends View {
 
     private float mRadius;
-    private static final int ANIMATION_DURATION = 4000;
+    private static final int ANIMATION_DURATION = 3500;
     private static final long ANIMATION_DELAY = 3500;
 
     private AnimatorSet mPulseAnimatorSet = new AnimatorSet();
@@ -29,16 +33,19 @@ public class BreathingAnimatedView extends View {
     private float mY;
 
     private Paint mPaint = new Paint();
+    private Context mContext;
 
     private static String TAG = "BreathingAnimatedView";
 
     public BreathingAnimatedView(Context context) {
         this(context, null);
+        mContext = context;
         Log.d(TAG, "default constructor entered");
     }
 
     public BreathingAnimatedView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
         Log.d(TAG, "constructor entered w attrs");
     }
 
@@ -69,20 +76,33 @@ public class BreathingAnimatedView extends View {
 
     @Override
     public void onSizeChanged(int w, int h, int oldw, int oldh) {
+
+        //source: https://stackoverflow.com/questions/13950338/how-to-make-an-android-device-vibrate
+        Vibrator vibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(7000,VibrationEffect.DEFAULT_AMPLITUDE));
+            Log.d(TAG, "vibrated");
+        }else{
+            //deprecated in API 26
+            vibrator.vibrate(7000);
+            Log.d(TAG, "vibrated");
+        }
+
         Log.d(TAG, "onSizeChanged hit");
         ObjectAnimator growAnimator = ObjectAnimator.ofFloat(this,
-                "radius", (getWidth()/4), (getWidth()/2));
+                "radius", (getWidth()/4), (getWidth()/3));
         growAnimator.setDuration(ANIMATION_DURATION);
         growAnimator.setInterpolator(new LinearInterpolator());
 
         ObjectAnimator shrinkAnimator = ObjectAnimator.ofFloat(this,
-                "radius", (getWidth()/2), (getWidth()/4));
+                "radius", (getWidth()/3), (getWidth()/4));
         shrinkAnimator.setDuration(ANIMATION_DURATION);
         shrinkAnimator.setInterpolator(new LinearOutSlowInInterpolator());
         shrinkAnimator.setStartDelay(ANIMATION_DELAY);
 
         ObjectAnimator repeatAnimator = ObjectAnimator.ofFloat(this,
-                "radius", (getWidth()/4), (getWidth()/2));
+                "radius", (getWidth()/4), (getWidth()/3));
         repeatAnimator.setStartDelay(ANIMATION_DELAY);
         repeatAnimator.setDuration(ANIMATION_DURATION);
         repeatAnimator.setRepeatCount(1);

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 //source for animation: https://google-developer-training.gitbooks.io/android-developer-advanced-course-practicals/unit-5-advanced-graphics-and-views/lesson-12-animations/12-1-p-property-animation/12-1-p-property-animation.html
 
@@ -20,6 +21,7 @@ public class BreathingActivity extends AppCompatActivity {
     private static int CALM_HEART_BEAT = 100;
 
     private boolean continueExercise = true;
+    final int[] counter = new int[1];
 
     private static String TAG = "Breathing";
 
@@ -41,18 +43,49 @@ public class BreathingActivity extends AppCompatActivity {
 
         final Handler handler = new Handler();
         //in milliseconds
-        final int delay = 15000;
+        final int delay = 14000;
 
         mBreathingAnimatedView.animationActivated(x, y);
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                counter[0] = 0;
+                textChange();
+                TextView instructionText = (TextView) findViewById(R.id.textInstructions);
+                instructionText.setText("Breathe Out");
                 mBreathingAnimatedView.animationActivated(x, y);
                 handler.postDelayed(this, delay);
             }
         }, delay);
 
+    }
+
+    private void textChange() {
+        final Handler handler = new Handler();
+        final int delay = 3500;
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                counter[0]++;
+                if (counter[0] % 4 == 2) {
+                    TextView instructionText = (TextView) findViewById(R.id.textInstructions);
+                    instructionText.setText("");
+                    instructionText.setText("Breathe In");
+                } else if (counter[0] % 4 == 1 || counter[0] % 4 == 3) {
+                    TextView instructionText = (TextView) findViewById(R.id.textInstructions);
+                    instructionText.setText("");
+                    instructionText.setText("Hold Breath");
+                } else {
+                    //
+                    TextView instructionText = (TextView) findViewById(R.id.textInstructions);
+                    instructionText.setText("");
+                    instructionText.setText("Breathe out");
+                }
+                handler.postDelayed(this, delay);
+            }
+        }, delay);
     }
 
     private void breathingExercise() {
