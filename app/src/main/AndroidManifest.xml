@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="groupdenim.cmpt276.mentalhealthlumo">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -25,9 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DragDropNumbers"></activity>
+        <activity android:name=".DragDropNumbers" />
         <activity android:name=".BreathingActivity" />
-        <activity android:name=".TestYourHappiness"></activity>
+        <activity android:name=".TestYourHappiness" />
+        <activity android:name=".ResourcesActivity"></activity>
     </application>
 
 </manifest>
