@@ -3,6 +3,7 @@ package groupdenim.cmpt276.mentalhealthlumo;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -43,6 +44,7 @@ public class BreathingActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 
     @Override
@@ -56,13 +58,18 @@ public class BreathingActivity extends AppCompatActivity {
 
         mBreathingAnimatedView.animationActivated(x, y);
 
+
+        final TextView preInstruction = (TextView) findViewById(R.id.textBeforeAnimation);
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                preInstruction.setText("");
                 counter[0] = 0;
                 textChange();
                 TextView instructionText = (TextView) findViewById(R.id.textInstructions);
                 instructionText.setText("Breathe Out");
+                counter[0]++;
                 mBreathingAnimatedView.animationActivated(x, y);
                 handler.postDelayed(this, delay);
             }
@@ -77,20 +84,22 @@ public class BreathingActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                counter[0]++;
+
                 if (counter[0] % 4 == 2) {
                     TextView instructionText = (TextView) findViewById(R.id.textInstructions);
                     instructionText.setText("");
                     instructionText.setText("Breathe In");
+                    counter[0]++;
                 } else if (counter[0] % 4 == 1 || counter[0] % 4 == 3) {
                     TextView instructionText = (TextView) findViewById(R.id.textInstructions);
                     instructionText.setText("");
                     instructionText.setText("Hold Breath");
-                } else {
-                    //
+                    counter[0]++;
+                } else if (counter[0] % 4 == 0){
                     TextView instructionText = (TextView) findViewById(R.id.textInstructions);
                     instructionText.setText("");
                     instructionText.setText("Breathe out");
+                    counter[0]++;
                 }
                 handler.postDelayed(this, delay);
             }

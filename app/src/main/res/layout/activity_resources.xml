@@ -14,18 +14,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="25dp">
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:fontFamily="sans-serif">
 
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:text="Resources:">
+                android:text="Resources:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
             </TextView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Symptoms include (in order of frequency):"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Symptoms include (in order of frequency):
-Heart palpitations
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Heart palpitations
 Overly aware of heartbeat
 Heart is racing, pounding or fluttering
 Dizzyness/Lightheadness
@@ -34,10 +45,17 @@ Sweating
 Chest pain and discomfort
 "/>
             <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Anxiety.org:"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Anxiety.org
-Changes after having panic attacks
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Changes after having panic attacks
 Continued concern about future panic attacks or the consequences
 Significant change in behavior associated with the attack (e.g., avoiding taking the stairs)
 Fear of going crazy or losing control
@@ -54,29 +72,48 @@ If you avoid the situations, your brain treats it as if it was a true threat
 People should get used to the situation by slowly adapting to the stimulants that cause the heart attacks
 "/>
             <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Mastery of Your Anxiety and Panic: "
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mastery of Your Anxiety and Panic
-Techniques for reducing panic attacks include:
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Techniques for reducing panic attacks include:
 Record keeping
 Monitoring of progress
 Breathing techniques
 Thinking skills
 "/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Other References"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Other References
-Clark, D. M., Salkovskis, P. M., and Chalkley, A. J. (1985). Respiratory control as a treatment for panic attacks. Journal of Behavior Therapy and Experimental Psychiatry, 16(1), 23-30.
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Clark, D. M., Salkovskis, P. M., and Chalkley, A. J. (1985). Respiratory control as a treatment for panic attacks. Journal of Behavior Therapy and Experimental Psychiatry, 16(1), 23-30.
 Anxiety and Depression Association of America. n.d. Symptoms | Anxiety and Depression Association of America. https://adaa.org/understanding-anxiety/panic-disorder-agoraphobia/symptoms.
 "/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="Sources:"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:text="Stanford Panic Attack Diary
 Reference:
 Margraf, J., Taylor, C. B., Ehlers, A., Roth, W. T., and Agras, W. S. (1987). Panic attacks in the natural environment. Journal of Nervous and Mental Disease, 175(9), 558-565.
