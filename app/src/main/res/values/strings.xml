@@ -3,5 +3,6 @@
     <string name="welcome">Hello there my strong people!</string>
     <string name="gotoMain"> Main Menu </string>
     <string name="toMenu">To Menu</string>
+    <string name="sortGameNumber">Number Sort</string>
 
 </resources>

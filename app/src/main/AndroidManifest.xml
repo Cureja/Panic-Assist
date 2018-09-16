@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DragDropNumbers"></activity>
+        <activity android:name=".DragDropNumbers" />
+        <activity android:name=".Form" />
+        <activity android:name=".FormViewing"></activity>
     </application>
 
 </manifest>
