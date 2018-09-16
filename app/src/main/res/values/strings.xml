@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MentalHealthLumo</string>
+    <string name="welcome">Hello there my strong people!</string>
+    <string name="gotoMain"> Main Menu </string>>;
+
+
 </resources>
