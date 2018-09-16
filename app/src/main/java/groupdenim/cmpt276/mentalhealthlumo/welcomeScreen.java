@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.easyandroidanimations.library.ExplodeAnimation;
 
 public class welcomeScreen extends AppCompatActivity {
 
@@ -21,16 +20,7 @@ public class welcomeScreen extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new ExplodeAnimation(skipButton)
-                        .setDuration(750)
-                        .animate();
-                final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        finish();
-                    }
-                }, 1000);
+                finish();
             }
         });
 

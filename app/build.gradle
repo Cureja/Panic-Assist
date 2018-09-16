@@ -20,6 +20,7 @@ android {
 
 repositories {
     maven { url "https://jitpack.io" }
+    mavenCentral()
 }
 
 dependencies {
@@ -31,6 +32,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Animation Library
-    implementation 'com.github.2359media:EasyAndroidAnimations:0.8'
+    compile 'com.clarifai.clarifai-api2:core:2.3.0'
     implementation 'com.android.support:design:26.1.0'
 }

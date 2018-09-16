@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="groupdenim.cmpt276.mentalhealthlumo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,6 +25,9 @@
         <activity android:name=".DragDropNumbers" />
         <activity android:name=".Form" />
         <activity android:name=".FormViewing"></activity>
+        <activity android:name=".DragDropNumbers" />
+        <activity android:name=".TestYourHappiness" />
+        <activity android:name=".AboutPage"></activity>
     </application>
 
 </manifest>
