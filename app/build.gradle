@@ -18,6 +18,10 @@ android {
     }
 }
 
+repositories {
+    maven { url "https://jitpack.io" }
+    mavenCentral()
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -29,4 +33,7 @@ dependencies {
 
     //heart rate o meter library
     implementation 'com.github.kibotu:Heart-Rate-Ometer:04d9a2e8e0@aar'
+    //Animation Library
+    implementation 'com.github.2359media:EasyAndroidAnimations:0.8'
+    compile 'com.clarifai.clarifai-api2:core:2.3.0'
 }

@@ -34,6 +34,15 @@ public class BreathingActivity extends AppCompatActivity {
         Log.d(TAG, "finished setContentView");
 
         breathingExercise();
+
+        Button btn = (Button) findViewById(R.id.btnFinishedExercise);
+        btn.setText("Exit");
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
