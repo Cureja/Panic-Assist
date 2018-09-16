@@ -64,7 +64,8 @@ public class Form extends AppCompatActivity {
                 contentValues.put(SQLiteHelper.COL_CHECK4, checkBox4.isChecked() ? 1 : 0);
                 contentValues.put(SQLiteHelper.COL_CHECK5, checkBox5.isChecked() ? 1 : 0);
                 contentValues.put(SQLiteHelper.COL_CHECK6, checkBox6.isChecked() ? 1 : 0);
-                contentValues.put(SQLiteHelper.COL_WHAT, "");
+
+                contentValues.put(SQLiteHelper.COL_WHAT, what_Happened_tb.getText().toString());
 
                 Date c = Calendar.getInstance().getTime();
                 SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
@@ -76,7 +77,9 @@ public class Form extends AppCompatActivity {
                 contentValues.put(SQLiteHelper.COL_LOCATION, "SFU Burnaby");
 
 
+
                 database.insert(SQLiteHelper.TAB_NAME, null, contentValues);
+                finish();
             }
         });
 

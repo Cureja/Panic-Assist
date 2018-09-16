@@ -25,7 +25,6 @@
         <activity android:name=".DragDropNumbers" />
         <activity android:name=".Form" />
         <activity android:name=".FormViewing"></activity>
-        <activity android:name=".DragDropNumbers" />
         <activity android:name=".TestYourHappiness" />
         <activity android:name=".AboutPage"></activity>
     </application>

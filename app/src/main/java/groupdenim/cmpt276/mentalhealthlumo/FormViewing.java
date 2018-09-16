@@ -46,10 +46,10 @@ public class FormViewing extends AppCompatActivity {
             String location = cursor.getString(cursor.getColumnIndex(SQLiteHelper.COL_LOCATION));
 
 
-            newText += ("what " + what +"\n");
-            newText += ("date " + date +"\n");
-            newText += ("time " + time +"\n");
-            newText += ("location " + location +"\n");
+            newText += ("what: " + what +"\n");
+            newText += ("date: " + date +"\n");
+            newText += ("time: " + time +"\n");
+            newText += ("location: " + location +"\n");
             newText += ("symptoms: " + "\n");
 
 

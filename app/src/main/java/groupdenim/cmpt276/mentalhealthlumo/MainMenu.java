@@ -23,9 +23,10 @@ public class MainMenu extends AppCompatActivity {
             startActivity(welcomeScreen);
         }
 
+        Button goToDiaryEntry = findViewById(R.id.diaryEntry);
         Button goToImage = findViewById(R.id.toImageChecker);
         Button goToDragNDrop = findViewById(R.id.dragNDrop);
-        Button goToSettings = findViewById(R.id.settingsButton);
+        Button goToAccessEntry = findViewById(R.id.accessEntryButton);
         Button goToAbout = findViewById(R.id.aboutButton);
         Button goToResouces = findViewById(R.id.resButton);
         Button gotoBreathing = findViewById(R.id.breatheButton);
@@ -50,6 +51,22 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainMenu.this, AboutPage.class);
+                startActivity(intent);
+            }
+        });
+
+        goToAccessEntry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, FormViewing.class);
+                startActivity(intent);
+            }
+        });
+
+        goToDiaryEntry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this, Form.class);
                 startActivity(intent);
             }
         });

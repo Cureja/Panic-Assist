@@ -13,7 +13,6 @@ public class AboutPage extends AppCompatActivity {
 
         Button goToImage = findViewById(R.id.happyOrSadButton);
         Button goToDragNDrop = findViewById(R.id.DragNDrop);
-        Button goToSettings = findViewById(R.id.settingsButton);
         Button goToResouces = findViewById(R.id.rssButton);
         Button gotoBreathing = findViewById(R.id.breathingAssist);
 
