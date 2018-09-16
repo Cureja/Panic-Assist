@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.easyandroidanimations.library.ExplodeAnimation;
+//import com.easyandroidanimations.library.ExplodeAnimation;
 
 public class welcomeScreen extends AppCompatActivity {
     public static int SPLASH_SCREEN_TIMER = 6000;
