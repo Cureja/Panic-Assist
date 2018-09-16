@@ -3,5 +3,10 @@
     <string name="welcome">Hello there my strong people!</string>
     <string name="gotoMain"> Main Menu </string>
     <string name="toMenu">To Menu</string>
+    <string name="guessHappy">Guess If I\'m Happy or Anxious?</string>
+    <string name="areYouHappy">Are you Happy or Anxious?</string>
+    <string name="plsEnter">Enter your image url</string>
+    <string name="toImage">Happy Or Sad</string>
+    <string name="nil">nil</string>
 
 </resources>
